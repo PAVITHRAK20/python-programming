@@ -1,0 +1,28 @@
+name = input()
+distance = float(input())
+rate = float(input())
+waiting_fee = float(input())
+discount = float(input())
+distance_charge = distance * rate
+final_fare = distance_charge + waiting_fee - discount
+print(f"Passenger: {name}")
+print(f"Final Fare: {final_fare:.2f}")
+
+o/p:
+Input (stdin)
+
+    TN09AB123454050
+
+    1
+
+    4000
+
+    450
+
+    1500
+
+Your Output (stdout)
+
+    Passenger: TN09AB123454050
+
+    Final Fare: 2950.00
