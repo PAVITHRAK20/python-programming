@@ -1,0 +1,46 @@
+data = int(input())
+phone = input()
+
+if amount < 100:
+    print("Invalid - Minimum recharge is 100")
+elif amount < 300:
+    if data <= 2:
+        print("Basic Plan Activated - 1.5GB, 28 days")
+    else:
+        print("Insufficient plan for data need")
+elif amount < 700:
+    if data <= 20:
+        print("Standard Plan Activated - 20GB, 56 days")
+    else:
+        print("Insufficient plan for data need")
+else:
+    if phone == "true":
+        print("5G Unlimited Plan Activated - 84 days")
+    else:
+        print("4G Unlimited Plan Activated - 84 days")
+
+
+o/p:
+Input (stdin)
+
+    50
+
+    1
+
+    false
+
+    250
+
+    3
+
+    false
+
+    800
+
+    50
+
+    true
+
+Your Output (stdout)
+
+    Invalid - Minimum recharge is 100
