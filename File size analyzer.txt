@@ -1,0 +1,15 @@
+bytes = int(input())
+kilobytes = bytes // 1024
+remaining = bytes % 1024
+print(f"Size: {kilobytes} KB Remaining: {remaining} bytes")
+
+o/p:
+Input (stdin)
+
+    100000000
+
+Your Output (stdout)
+
+    Size: 97656 KB Remaining: 256 bytes
+
+   
