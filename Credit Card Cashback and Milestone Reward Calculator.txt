@@ -1,0 +1,63 @@
+amount = int(input())
+category = input()
+card = input()
+international = input()
+monthly = int(input())
+
+rate = 0
+
+if category == "Grocery":
+    rate = 5
+elif category == "Fuel":
+    rate = 2
+elif category == "Online Shopping":
+    rate = 10
+else:
+    rate = 1
+
+if card == "Platinum":
+    rate += 2
+
+cashback = amount * rate / 100
+
+if category == "Fuel" and cashback > 100:
+    cashback = 100
+elif category == "Online Shopping" and cashback > 500:
+    cashback = 500
+
+if monthly > 50000:
+    cashback += 200
+
+if international == "true":
+    cashback *= 0.5
+
+print(f"{cashback:.2f}")
+
+o/p:
+Input (stdin)
+
+    4000
+
+    Fuel
+
+    Platinum
+
+    false
+
+    60000
+
+    10000
+
+    Online Shopping
+
+    Regular
+
+    true
+
+    20000
+
+Your Output (stdout)
+
+    300.00
+
+  
