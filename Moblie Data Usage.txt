@@ -1,0 +1,18 @@
+data_usage = int(input())
+gb = data_usage // 1024
+mb = data_usage % 1024
+print(gb)
+print(mb)
+
+o/p:
+Input (stdin)
+
+    2500
+
+Your Output (stdout)
+
+    2
+
+    452
+
+    
