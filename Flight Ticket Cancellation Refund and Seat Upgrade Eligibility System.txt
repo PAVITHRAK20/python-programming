@@ -1,0 +1,66 @@
+ticket = input()
+hours = int(input())
+loyalty = input()
+seat = input()
+paid = int(input())
+cost = int(input())
+
+if ticket == "First":
+    refund = 100
+elif ticket == "Business":
+    if hours >= 24:
+        refund = 90
+    elif hours >= 12:
+        refund = 50
+    elif loyalty == "Gold":
+        refund = 25
+    else:
+        refund = 0
+else:
+    if hours >= 48:
+        refund = 70
+    elif hours >= 24:
+        refund = 30
+    else:
+        refund = 0
+
+if seat == "true" and (loyalty == "Gold" or paid >= cost):
+    upgrade = "Approved"
+else:
+    upgrade = "Denied"
+
+print(f"Refund: {refund}%")
+print(f"Upgrade: {upgrade}")
+
+o/p:
+Input (stdin)
+
+    Business
+
+    10
+
+    Gold
+
+    true
+
+    0
+
+    2000
+
+    Economy
+
+    30
+
+    Regular
+
+    false
+
+    5000
+
+    3000
+
+Your Output (stdout)
+
+    Refund: 25%
+
+    Upgrade: Approved
